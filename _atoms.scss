@@ -28,7 +28,11 @@ h2,
 h3,
 h4 {
   font-family: $fonts-headline;
-  margin: 0;
+  margin: 5px;
+  // border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px $grey-sidebar;
+  border-radius: 2%;
+
 }
 h1 {
   background: $accent1;
@@ -53,6 +57,7 @@ h3 {
   padding: 0.5em 0 0.25em 0;
 }
 h4 {
+  font-family: $fonts-body;
   font-size: 1.5em;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
