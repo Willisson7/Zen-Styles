@@ -6,6 +6,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   background-color: $background-color;
   padding: 5%;
@@ -16,6 +17,7 @@ body {
   font-size: 85%;
   color: $text-dark;
   background-color: $primary;
+  background-image: url('https://pixabay.com/photos/moon-full-moon-trees-moonlight-5998379/');
   margin: 0;
   padding: 1em;
 }
