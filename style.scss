@@ -9,15 +9,30 @@
 
 html {
   background-color: $background-color;
-  padding: 5%;
-}
+  padding: 2%;
+  background-image: url(images/moon-5998379_1280.jpg);
+  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 body {
-  font-family: $fonts-body;
   font-size: 85%;
   color: $text-dark;
   background-color: $primary;
-  background-image: url('https://pixabay.com/photos/moon-full-moon-trees-moonlight-5998379/');
+  background-size: contain;
   margin: 0;
   padding: 1em;
+  opacity: 50%;
+}
+}
+
+.sidebar{
+  position: fixed;
+  top: 50%; /* Adjust as needed */
+  right: 0;
+  transform: translateY(-50%); /* Center vertically */
+  /* Additional styling */
+  background-color: $background-color;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
