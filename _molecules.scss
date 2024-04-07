@@ -5,19 +5,16 @@
 //The base styling we made on our atoms (elements) does most of the work...here we would make any modifications on the elements if they need to appear differently in a certain molecule (block)
 [role="banner"] {
   > h1 {
-    // notice we have to reference the 'atoms' namespace to find our mixins.
+    
     @include atoms.uppercase($text-light);
   }
 }
 .summary {
   @include atoms.uppercase($text-light);
   padding: 5% 0;
-  p:last-child {
-    
-    @include atoms.divider;
-  }
+
   a {
-    color: $text-light; //in this case the link wants to be light instead of the default dark
+    color: $text-light; 
   }
   
 }
