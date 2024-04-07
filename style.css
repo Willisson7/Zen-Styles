@@ -91,17 +91,6 @@ a:hover {
   color: #fff;
 }
 
-.preamble {
-  background: #1e2650;
-  color: #ffffff;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
-}
-
-.intro {
-  padding: 5%;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -119,10 +108,23 @@ body {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 85%;
   color: #ffffff;
-  background-color: rgba(42, 67, 89, 0.9);
-  /* Adjust the last number for transparency */
-  margin: 0;
-  padding: 1em;
+  background-color: rgba(42, 67, 89, 0.85);
+  padding: 5px;
+}
+
+.page-wrapper {
+  padding: 5%;
+}
+
+.preamble h3::before,
+.explanation h3::before,
+.participation h3::before,
+.benefits h3::before,
+.requirements h3::before {
+  content: "";
+  position: absolute;
+  background: url("images/flower-3205083_640.png") no-repeat center center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
