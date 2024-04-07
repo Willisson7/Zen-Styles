@@ -111,13 +111,6 @@ a:hover {
   color: #fff;
 }
 
-.preamble {
-  background: #2a4359;
-  color: #ffffff;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -139,18 +132,6 @@ body {
   padding: 5px;
 }
 
-.sidebar {
-  position: fixed;
-  top: 50%;
-  /* Adjust as needed */
-  right: 0;
-  transform: translateY(-50%);
-  /* Center vertically */
-  /* Additional styling */
-  background-color: #1e2650;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
 
 .page-wrapper {
   padding: 5%;
