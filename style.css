@@ -5,8 +5,10 @@ h3,
 h4 {
   font-family: "Tangerine", cursive, serif;
   margin: 5px;
-  box-shadow: 0 5px 10px rgba(238, 240, 244, 0.9);
+  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
   border-radius: 2%;
+  position: relative;
+  padding-bottom: 10px;
 }
 
 h1 {
@@ -24,6 +26,19 @@ h2 {
   font-size: 6em;
   letter-spacing: 1px;
   line-height: 1em;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the glowing line */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #00FFFF, rgba(255, 255, 255, 0)); /* Adjust colors as needed */
+  pointer-events: none; /* Ensure the line doesn't block interactions */
+  z-index: 1; /* Ensure the line stays above other content */
+  animation: glow-animation 2s infinite; /* Adjust animation duration as needed */
 }
 
 h3 {
@@ -62,6 +77,17 @@ a:hover {
   border-color: #A325d9;
 }
 
+@keyframes glow-animation {
+  0% {
+    box-shadow: 0 0 10px #00FFFF; /* Adjust glow effect as needed */
+  }
+  50% {
+    box-shadow: 0 0 20px #00FFFF; /* Adjust glow effect as needed */
+  }
+  100% {
+    box-shadow: 0 0 10px #00FFFF; /* Adjust glow effect as needed */
+  }
+}
 [role=banner] > h1 {
   font-weight: 300;
   letter-spacing: 2px;
@@ -74,7 +100,7 @@ a:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
-  padding: 15% 0;
+  padding: 5% 0;
 }
 .summary p:last-child {
   border-top: 1px solid #A325d9;
@@ -92,41 +118,79 @@ a:hover {
   padding: 5% 5% 5% 30%;
 }
 
-.intro {
-  padding: 5%;
-}
-
 * {
   box-sizing: border-box;
 }
 
 html {
   background-color: #1e2650;
-  padding: 2%;
-  background-image: url(images/moon-5998379_1280.jpg);
-
-  background-repeat: no-repeat;
+  padding: 5%;
+  background-image: url("./images/moon-5998379_1280.jpg");
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-html body {
+
+body {
+  font-family: "Quattrocento Sans", sans-serif;
   font-size: 85%;
   color: #ffffff;
-  background-color: #2a4359;
-  background-size: contain;
-  margin: 0;
-  padding: 1em;
-  opacity: 50%;
+  background-color: rgba(42, 67, 89, 0.85);
+  padding: 5px;
 }
 
 .sidebar {
   position: fixed;
-  top: 50%; /* Adjust as needed */
+  top: 50%;
+  /* Adjust as needed */
   right: 0;
-  transform: translateY(-50%); /* Center vertically */
+  transform: translateY(-50%);
+  /* Center vertically */
   /* Additional styling */
   background-color: #1e2650;
   padding: 10px;
   border: 1px solid #ccc;
+}
+
+.page-wrapper {
+  padding: 5%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  background-image: url(images/flower-3205083_640.png);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 0 center;
+  padding-left: 30px;
+  margin-top: 5%;
+}
+
+p {
+  width: 80%;
+}
+
+/* Adjustments for smaller screens */
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar {
+    margin-top: 60px; /* Adjust as needed */
+    position: relative;
+  }
+  footer {
+    display: block; /* Make sure footer is a block element */
+    margin-top: 20px; /* Adjust as needed */
+  }
+  /* Adjust styles of the elements inside the footer if needed */
 }
 
 /*# sourceMappingURL=style.css.map */
